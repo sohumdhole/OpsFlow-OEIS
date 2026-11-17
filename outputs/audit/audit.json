@@ -1,0 +1,403 @@
+{
+  "project": "OpsFlow-OEIS",
+  "provenance": {
+    "production": {
+      "source": "Levy, D. (2014). Production Analysis with Process Mining Technology. 4TU.ResearchData. https://doi.org/10.4121/uuid:68726926-5ac5-4fab-b873-ee76ea412399",
+      "zip_md5": "46174bf470258f9895dd153c78bc8b61",
+      "zip_md5_matches_published": true,
+      "csv_sha256": "ef2477450926aa650e83a038cc81578a048a31ee22dfb858b5eab2a7883a21e6"
+    },
+    "rasff": {
+      "source": "European Commission, RASFF Window public search (https://webgate.ec.europa.eu/rasff-window/screen/search), product categories 'meat and meat products (other than poultry)' and 'poultry meat and poultry meat products', CSV export",
+      "exported": "2026-11-17",
+      "csv_sha256": "d1b3a57528b70868f1ed5c79bc7ae4691f4dc7d39bd8afcb01687d87eb3d2299",
+      "rows": 4410
+    },
+    "fsai": {
+      "source": "Food Safety Authority of Ireland, allergen alerts listing (https://www.fsai.ie/news-alerts/allergens), all listing pages, collected 2026-11-17; first and last pages checked against the live site",
+      "csv_sha256": "1627eb76ea7182c1dddcf89dfbd764bad2cc30ccefcd27052d394cd09c1b2cf2",
+      "rows": 211,
+      "pages": 22
+    }
+  },
+  "production_dq": {
+    "bronze_rows": 4543,
+    "silver_rows": 4521,
+    "quarantined_rows": 22,
+    "rules": [
+      {
+        "rule": "DQ01",
+        "description": "Start or complete timestamp missing / unparseable",
+        "severity": "QUARANTINE",
+        "rows": 0
+      },
+      {
+        "rule": "DQ02",
+        "description": "Complete timestamp earlier than start",
+        "severity": "QUARANTINE",
+        "rows": 0
+      },
+      {
+        "rule": "DQ03",
+        "description": "Exact duplicate of an earlier report row",
+        "severity": "QUARANTINE",
+        "rows": 22
+      },
+      {
+        "rule": "DQ04",
+        "description": "Quantity field missing or negative",
+        "severity": "QUARANTINE",
+        "rows": 0
+      },
+      {
+        "rule": "DQ05",
+        "description": "Worker ID missing",
+        "severity": "QUARANTINE",
+        "rows": 0
+      },
+      {
+        "rule": "DQ06",
+        "description": "Span field malformed (not HHH:MM)",
+        "severity": "FLAG",
+        "rows": 1
+      },
+      {
+        "rule": "DQ07",
+        "description": "Span field disagrees with timestamps by more than 1 minute (timestamps used)",
+        "severity": "FLAG",
+        "rows": 699
+      },
+      {
+        "rule": "DQ08",
+        "description": "Zero-duration report",
+        "severity": "FLAG",
+        "rows": 9
+      },
+      {
+        "rule": "DQ09",
+        "description": "Rejected quantity exceeds work order quantity",
+        "severity": "FLAG",
+        "rows": 0
+      }
+    ],
+    "cases": 225,
+    "parts": 43,
+    "activities": 55,
+    "resources": 31,
+    "workers": 49,
+    "stages": 13,
+    "first_start": "2012-01-02 00:00:00",
+    "last_complete": "2012-03-31 05:45:00",
+    "report_type_counts": {
+      "D": 3764,
+      "S": 704,
+      "B": 53
+    },
+    "mean_qty_completed_by_report_type": {
+      "B": 0.0,
+      "D": 24.45,
+      "S": 0.67
+    }
+  },
+  "rasff_dq": {
+    "rows": 4410,
+    "unparsed_dates": 0,
+    "missing_findings": 679,
+    "multi_hazard_rows": 379,
+    "first": "2017-02-01",
+    "last": "2026-11-16"
+  },
+  "value_stream": {
+    "period_days": 89.2,
+    "lead_time_median_h": 381.9,
+    "lead_time_median_days": 15.9,
+    "lead_time_p90_days": 55.3,
+    "processing_median_h": 34.9,
+    "flow_efficiency_median_pct": 10.2,
+    "flow_efficiency_pooled_pct": 10.8,
+    "waiting_share_pct": 89.2,
+    "wait_reconciliation_max_abs_error_h": 0.0,
+    "bottleneck_stage": "Lapping",
+    "bottleneck_queue_share_pct": 20.4,
+    "bottleneck_queue_h": 20137.0,
+    "bottleneck_median_visit_queue_h": 0.5,
+    "bottleneck_p90_visit_queue_h": 268.4,
+    "bottleneck_resource": "Machine 1 - Lapping",
+    "bottleneck_resource_busy_share_pct": 23.6,
+    "second_queue_stage": "Final inspection",
+    "second_queue_share_pct": 14.1,
+    "busiest_resource": "Machine 4 - Turning & Milling",
+    "busiest_resource_busy_h": 1390.0,
+    "busiest_resource_busy_share_pct": 64.9,
+    "setup_h_total": 2422.0,
+    "run_h_total": 11301.0,
+    "setup_share_of_run_plus_setup_pct": 17.7,
+    "breakdown_events": 53,
+    "breakdown_h": 171.7,
+    "cases_with_breakdown": 37,
+    "median_lead_days_with_breakdown": 22.0,
+    "median_lead_days_without_breakdown": 15.0,
+    "cases_with_rework": 53,
+    "cases_with_rework_pct": 23.6,
+    "median_lead_days_with_rework": 37.1,
+    "median_lead_days_without_rework": 12.3,
+    "units_rejected_total": 593,
+    "units_rejected_at_inspection": 514,
+    "units_mrb_total": 105,
+    "inspection_rejection_rate_pct": 1.75,
+    "top_reject_part": "Cable Head",
+    "top_reject_part_units": 217,
+    "top_reject_part_share_pct": 42.2,
+    "parts_for_80pct_rejects": 6,
+    "route_variants": 120,
+    "conformance_pct": 18.3,
+    "conformance_eligible_cases": 115,
+    "conformance_parts": 5,
+    "cases_with_loops": 162,
+    "cases_reached_packing": 175,
+    "cases_total": 225,
+    "completed_cases_with_rework": 46,
+    "completed_cases_with_breakdown": 33,
+    "top_transition": "Turning & milling > In-process QC",
+    "top_transition_count": 349
+  },
+  "future_state": {
+    "bottleneck_cap_h": 24.0,
+    "percentile_cap": 0.75,
+    "scenarios": {
+      "Current": {
+        "median_lead_days": 15.9,
+        "mean_lead_days": 23.2,
+        "p90_lead_days": 55.3,
+        "pooled_flow_efficiency_pct": 10.8,
+        "median_change_pct": 0.0,
+        "mean_change_pct": 0.0
+      },
+      "FS1": {
+        "median_lead_days": 13.4,
+        "mean_lead_days": 19.9,
+        "p90_lead_days": 46.1,
+        "pooled_flow_efficiency_pct": 12.6,
+        "median_change_pct": -15.9,
+        "mean_change_pct": -14.4
+      },
+      "FS2": {
+        "median_lead_days": 5.8,
+        "mean_lead_days": 7.4,
+        "p90_lead_days": 14.9,
+        "pooled_flow_efficiency_pct": 33.6,
+        "median_change_pct": -63.8,
+        "mean_change_pct": -68.0
+      },
+      "FS3": {
+        "median_lead_days": 15.2,
+        "mean_lead_days": 21.4,
+        "p90_lead_days": 48.6,
+        "pooled_flow_efficiency_pct": 11.5,
+        "median_change_pct": -4.4,
+        "mean_change_pct": -7.8
+      },
+      "FS4": {
+        "median_lead_days": 5.6,
+        "mean_lead_days": 6.9,
+        "p90_lead_days": 13.9,
+        "pooled_flow_efficiency_pct": 35.5,
+        "median_change_pct": -64.8,
+        "mean_change_pct": -70.2
+      }
+    },
+    "smed_50pct_hours_freed": 1211.0,
+    "smed_50pct_hours_freed_busiest_resource": 151.0
+  },
+  "food_safety": {
+    "rasff_notifications": 4410,
+    "rasff_poultry": 2934,
+    "rasff_meat_other": 1476,
+    "rasff_with_stated_hazard": 3730,
+    "rasff_first": "2017-02-01",
+    "rasff_last": "2026-11-16",
+    "rasff_since_2020": 4374,
+    "rasff_full_years_min": 518,
+    "rasff_full_years_max": 645,
+    "rasff_2026_to_date": 790,
+    "pathogen_share_pct": 88.3,
+    "top_hazard": "Salmonella (all serotypes)",
+    "top_hazard_n": 2753,
+    "top_hazard_share_pct": 73.8,
+    "listeria_n": 301,
+    "serious_share_pct": 57.6,
+    "meat_other_top_hazard": "Salmonella (all serotypes)",
+    "meat_other_top_hazard_share_pct": 33.1,
+    "meat_other_listeria_share_pct": 20.2,
+    "rte_processed_n": 693,
+    "rte_processed_stated_n": 553,
+    "rte_top_hazard": "Salmonella (all serotypes)",
+    "rte_top_hazard_share_pct": 58.2,
+    "rte_listeria_share_pct": 25.3,
+    "ireland_involved_n": 216,
+    "ireland_notifying_n": 65,
+    "ireland_top_hazard": "Salmonella (all serotypes)",
+    "allergen_category_n": 37,
+    "hazard_categories_mapped": 26,
+    "hazard_categories_total": 26,
+    "notifications_with_mapped_control_pct": 100.0,
+    "fsai_alerts": 211,
+    "fsai_undeclared": 110,
+    "fsai_possible_presence": 40,
+    "fsai_mispacked": 25,
+    "fsai_incorrectly_declared": 26,
+    "fsai_not_english": 7,
+    "fsai_label_pack_errors": 58,
+    "fsai_top_allergen": "Milk",
+    "fsai_top_allergen_n": 48,
+    "fsai_second_allergen": "Peanuts",
+    "fsai_second_allergen_n": 42,
+    "fsai_meat_product_alerts": 22,
+    "fsai_meat_mispacked": 7
+  },
+  "traceability": {
+    "target_case": "Case 18",
+    "target_part": "Cable Head",
+    "target_final_inspection_rejected": 24,
+    "upstream_operations": 172,
+    "upstream_resources": 9,
+    "upstream_workers": 16,
+    "trace_resource": "Machine 2 - Round Grinding",
+    "trace_worker": "ID4355",
+    "window_h": 24,
+    "window_start": "2012-03-06 23:08:00",
+    "window_end": "2012-03-08 23:25:00",
+    "forward_cases": 4,
+    "forward_parts": 2,
+    "forward_cases_packed": 4,
+    "forward_units": 447,
+    "query_ms": 20.4,
+    "query_under_1s": true
+  },
+  "excel": {
+    "file": "outputs/excel/OpsFlow_OEIS_KPI_Pack.xlsx",
+    "sheets": [
+      "KPI",
+      "Cases",
+      "Stages",
+      "Daily",
+      "FutureState",
+      "FoodSafety",
+      "Lists"
+    ],
+    "completed_orders": 175,
+    "formula_kpis": 15
+  },
+  "powerbi": {
+    "tables": {
+      "fact_task": 4521,
+      "fact_case": 225,
+      "dim_part": 43,
+      "dim_resource": 31,
+      "dim_worker": 49,
+      "fact_future_state": 5,
+      "fact_rasff": 4410,
+      "fact_fsai": 211,
+      "dim_hazard_control": 26
+    },
+    "measures": 22
+  },
+  "validation": {
+    "checks": 23,
+    "passed": 23,
+    "results": [
+      {
+        "check": "Bronze rows = silver + quarantined",
+        "passed": true
+      },
+      {
+        "check": "Production zip MD5 matches 4TU published value",
+        "passed": true
+      },
+      {
+        "check": "Silver has no negative durations",
+        "passed": true
+      },
+      {
+        "check": "Silver has no exact duplicates",
+        "passed": true
+      },
+      {
+        "check": "Every case has a part",
+        "passed": true
+      },
+      {
+        "check": "Queue gaps reconcile to lead minus processing time",
+        "passed": true
+      },
+      {
+        "check": "Lead time >= processing time for every case",
+        "passed": true
+      },
+      {
+        "check": "Flow efficiency within 0..1",
+        "passed": true
+      },
+      {
+        "check": "Stage queue shares sum to 1",
+        "passed": true
+      },
+      {
+        "check": "Stage events sum to silver rows",
+        "passed": true
+      },
+      {
+        "check": "Rejected units: events = cases",
+        "passed": true
+      },
+      {
+        "check": "Report types are only B / D / S",
+        "passed": true
+      },
+      {
+        "check": "Future-state scenarios never lengthen lead time",
+        "passed": true
+      },
+      {
+        "check": "Current scenario equals measured median lead",
+        "passed": true
+      },
+      {
+        "check": "RASFF rows = poultry + other meat",
+        "passed": true
+      },
+      {
+        "check": "RASFF dates all parsed",
+        "passed": true
+      },
+      {
+        "check": "RASFF hazard-category table sums to stated rows",
+        "passed": true
+      },
+      {
+        "check": "Every RASFF hazard category has an OEIS control",
+        "passed": true
+      },
+      {
+        "check": "FSAI failure modes sum to alerts",
+        "passed": true
+      },
+      {
+        "check": "FSAI listing has no duplicate URLs",
+        "passed": true
+      },
+      {
+        "check": "Trace-back target is a completed order",
+        "passed": true
+      },
+      {
+        "check": "Trace-forward cases all used the traced resource",
+        "passed": true
+      },
+      {
+        "check": "Power BI fact_task rows = silver rows",
+        "passed": true
+      }
+    ]
+  }
+}

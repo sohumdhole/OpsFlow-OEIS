@@ -1,0 +1,90 @@
+count,from_stage,to_stage
+349,Turning & milling,In-process QC
+225,In-process QC,Turning & milling
+144,Final inspection,Packing
+143,Lapping,Grinding
+125,Packing,Final inspection
+119,In-process QC,Laser marking
+107,Grinding,Final inspection
+87,Grinding,Lapping
+81,Laser marking,Lapping
+51,Laser marking,Grinding
+50,In-process QC,Grinding
+46,Grinding,In-process QC
+38,Lapping,Final inspection
+37,Final inspection,Grinding
+35,In-process QC,Lapping
+30,Grinding,Packing
+29,Lapping,Laser marking
+27,Laser marking,Final inspection
+25,Grinding,Laser marking
+25,Turning & milling,Laser marking
+23,Final inspection,Rework
+19,Laser marking,In-process QC
+19,Rework,Final inspection
+17,Final inspection,In-process QC
+17,In-process QC,Final inspection
+16,Turning & milling,Grinding
+16,Lapping,In-process QC
+15,Rework,Packing
+14,Turning & milling,Lapping
+13,Final inspection,Lapping
+13,Rework,Lapping
+12,Laser marking,Packing
+12,Final inspection,Laser marking
+12,Turning & milling,Packing
+12,Grinding,Turning & milling
+11,Final inspection,Turning & milling
+11,Lapping,Turning & milling
+11,In-process QC,Packing
+11,Turning & milling,Final inspection
+10,Packing,In-process QC
+9,Laser marking,Turning & milling
+7,Packing,Lapping
+7,Lapping,Packing
+7,Packing,Turning & milling
+7,Lapping,Rework
+7,Packing,Grinding
+6,Grinding,Rework
+6,Packing,Rework
+6,Laser marking,Rework
+5,Setup / changeover,Turning & milling
+5,Turning & milling,Rework
+4,Packing,Laser marking
+4,Rework,In-process QC
+4,Fix / repair,In-process QC
+4,Wire cutting,In-process QC
+4,Deburring,Grinding
+4,In-process QC,Wire cutting
+4,Rework,Laser marking
+3,In-process QC,Deburring
+3,Deburring,Final inspection
+3,In-process QC,Rework
+2,Rework,Grinding
+2,In-process QC,Fix / repair
+2,In-process QC,Stress relief
+2,Turning & milling,Fix / repair
+2,Stress relief,Turning & milling
+2,Laser marking,Deburring
+2,Rework,Fix / repair
+2,Fix / repair,Packing
+2,Packing,Fix / repair
+1,Turning & milling,Setup / changeover
+1,Stress relief,In-process QC
+1,Lapping,Wire cutting
+1,Rework,Turning & milling
+1,Final inspection,Deburring
+1,Deburring,Turning & milling
+1,Turning & milling,Deburring
+1,Lapping,Deburring
+1,Laser marking,Wire cutting
+1,Wire cutting,Lapping
+1,Final inspection,Wire cutting
+1,Fix / repair,Rework
+1,Wire cutting,Grinding
+1,Turning & milling,Stress relief
+1,Setup / changeover,Final inspection
+1,Fix / repair,Final inspection
+1,Grinding,Deburring
+1,Deburring,Rework
+1,Wire cutting,Laser marking

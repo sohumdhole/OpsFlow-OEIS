@@ -1,0 +1,15 @@
+stage,stage_order
+Setup / changeover,1
+Turning & milling,2
+Wire cutting,3
+Grinding,4
+Lapping,5
+Stress relief,6
+Deburring,7
+Laser marking,8
+In-process QC,9
+Rework,10
+Fix / repair,11
+Final inspection,12
+Packing,13
+Other,14

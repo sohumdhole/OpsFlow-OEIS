@@ -1,0 +1,32 @@
+resource,stage,busy_h,busy_share_of_calendar
+Machine 4 - Turning & Milling,Turning & milling,1390.0166666666667,0.6490097661569588
+Machine 5 - Turning & Milling,Turning & milling,1276.25,0.595891210458737
+Machine 6 - Turning & Milling,Turning & milling,1218.3166666666666,0.568841679312089
+Machine 2 - Round Grinding,Grinding,1030.45,0.4811252480448232
+Machine 3 - Round Grinding,Grinding,1000.85,0.46730477413330224
+Machine 10 - Grinding,Turning & milling,975.4666666666667,0.45545309521030314
+Machine 9 - Turning & Milling,Turning & milling,859.75,0.40142406910236955
+Machine 8 - Turning & Milling,Turning & milling,788.8833333333333,0.36833586241780475
+Quality Check 1,In-process QC,780.7333333333333,0.3645305630131123
+Machine 1 - Lapping,Lapping,505.8833333333333,0.23620092603400644
+Machine 27 - Grinding,Grinding,474.8833333333333,0.22172678105910276
+Machine 12 - Grinding,Grinding,252.25,0.11777751838449865
+Machine 7- Laser Marking,Laser marking,222.25,0.1037702813120112
+Machine 15 - Turning,Turning & milling,197.98333333333332,0.09243998288004357
+Machine 11 - Grinding,Grinding,182.05,0.08500058363487803
+Wire Cut - Machine 13,Wire cutting,117.43333333333334,0.05483055134041477
+Machine 14 - Milling,Turning & milling,77.9,0.03637212559822575
+Machine 16 - Milling,Turning & milling,76.21666666666667,0.035586163962491736
+Packing,Packing,69.0,0.03221664526672114
+Machine 22 - Milling,Setup / changeover,32.78333333333333,0.015306797400879342
+Machine 18 - Wire Cutting,Wire cutting,30.0,0.014007237072487452
+Manual Deburring,Deburring,19.483333333333334,0.00909692229874324
+Machine 19 - Grinding,Grinding,13.5,0.0063032566826193535
+Machine 21 - Turning,Rework,12.0,0.005602894828994981
+Machine 17 - Sinking,Fix / repair,11.016666666666667,0.005143768724952337
+Machine 23 - Turning,Grinding,7.683333333333334,0.003587409050231509
+Machine 25 - Grinding,Fix / repair,6.75,0.0031516283413096768
+Oven,Stress relief,6.0,0.0028014474144974905
+Machine 26 - Flat Grinding,Grinding,4.5,0.002101085560873118
+Manual Milling - Machine 28,Rework,3.5,0.0016341776584568694
+Quality Check 2,In-process QC,2.25,0.001050542780436559

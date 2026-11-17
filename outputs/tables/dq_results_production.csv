@@ -1,0 +1,10 @@
+rule,description,severity,rows
+DQ01,Start or complete timestamp missing / unparseable,QUARANTINE,0
+DQ02,Complete timestamp earlier than start,QUARANTINE,0
+DQ03,Exact duplicate of an earlier report row,QUARANTINE,22
+DQ04,Quantity field missing or negative,QUARANTINE,0
+DQ05,Worker ID missing,QUARANTINE,0
+DQ06,Span field malformed (not HHH:MM),FLAG,1
+DQ07,Span field disagrees with timestamps by more than 1 minute (timestamps used),FLAG,699
+DQ08,Zero-duration report,FLAG,9
+DQ09,Rejected quantity exceeds work order quantity,FLAG,0

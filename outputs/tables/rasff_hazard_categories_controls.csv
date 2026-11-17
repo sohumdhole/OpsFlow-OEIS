@@ -1,0 +1,27 @@
+hazard_category,notifications,share_pct,cum_share_pct,oeis_control,requirements
+pathogenic micro-organisms,3294,88.31099195710456,88.31099195710456,"Cook / smoke core-temperature CCP, chill CCP, environmental Listeria monitoring, positive release on micro results","FR-06, FR-10, FR-11"
+residues of veterinary medicinal products,108,2.89544235924933,91.20643431635389,"Approved-supplier list and certificate check at goods-in, lot captured","FR-11, FR-22"
+pesticide residues,67,1.7962466487935658,93.00268096514746,Approved-supplier list and certificate check for spices and ingredients,"FR-11, FR-22"
+metals,66,1.769436997319035,94.7721179624665,"Supplier certificates at goods-in, lot captured for trace",FR-11
+non-pathogenic micro-organisms,47,1.260053619302949,96.03217158176945,"Hygiene and chill-chain records, shelf-life verification",FR-06
+allergens,37,0.9919571045576407,97.02412868632709,"Recipe allergen profile, changeover sign-off, label verification at pack","FR-07, FR-08, FR-09"
+environmental pollutants,19,0.5093833780160858,97.53351206434317,Supplier approval and certificates,FR-22
+organoleptic aspects,15,0.40214477211796246,97.93565683646113,Goods-in and pre-dispatch quality checks with hold / release,FR-10
+microbial contaminants (other),12,0.32171581769436997,98.2573726541555,"Hygiene, chill-chain and shelf-life records; positive release","FR-06, FR-10"
+food additives and flavourings,10,0.2680965147453083,98.52546916890081,"Recipe master data (nitrite and other additive limits), weigh-up records","FR-02, FR-22"
+feed additives,9,0.2412868632707775,98.76675603217159,Approved-supplier list and certificate check at goods-in,"FR-11, FR-22"
+composition,8,0.21447721179624668,98.98123324396784,Recipe master data and label verification,"FR-09, FR-22"
+foreign bodies / physical danger,7,0.18766756032171583,99.16890080428955,"Metal detection checks recorded per batch, hold on failure","FR-06, FR-10"
+adulteration / fraud,6,0.16085790884718498,99.32975871313674,"Supplier approval, lot genealogy, mass balance","FR-11, FR-12"
+foreign bodies,5,0.13404825737265416,99.4638069705094,"Metal detection checks recorded per batch, hold on failure","FR-06, FR-10"
+chemical contamination (other),4,0.10723860589812334,99.57104557640751,Supplier certificates; chemical storage and cleaning records,"FR-11, FR-22"
+parasitic infestation,4,0.10723860589812334,99.67828418230563,Goods-in inspection with hold / release,FR-10
+faulty labelling or claims,2,0.05361930294906167,99.73190348525469,Label verification at pack against recipe master data,"FR-09, FR-22"
+organoleptic non-compliance,2,0.05361930294906167,99.78552278820375,Goods-in and pre-dispatch quality checks with hold / release,FR-10
+radiation,2,0.05361930294906167,99.83914209115281,Supplier certificates at goods-in,FR-22
+mycotoxins,1,0.026809651474530835,99.86595174262735,Supplier certificates for spices and ingredients,FR-22
+outbreak/poisoning investigation,1,0.026809651474530835,99.89276139410188,Lot genealogy and rapid trace back / forward,"FR-11, FR-12"
+not determined (other),1,0.026809651474530835,99.91957104557642,"Hold pending investigation by Quality, with release record",FR-10
+packaging defective / incorrect,1,0.026809651474530835,99.94638069705096,Pack and label checks with hold / release,"FR-09, FR-10"
+fraud investigation,1,0.026809651474530835,99.97319034852549,"Supplier approval, lot genealogy, mass balance","FR-11, FR-12"
+natural toxins (other),1,0.026809651474530835,100.00000000000003,Supplier certificates for ingredients,FR-22

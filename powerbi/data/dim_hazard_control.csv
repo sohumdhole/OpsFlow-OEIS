@@ -1,0 +1,27 @@
+hazard_category,oeis_control,requirements
+pathogenic micro-organisms,"Cook / smoke core-temperature CCP, chill CCP, environmental Listeria monitoring, positive release on micro results","FR-06, FR-10, FR-11"
+residues of veterinary medicinal products,"Approved-supplier list and certificate check at goods-in, lot captured","FR-11, FR-22"
+pesticide residues,Approved-supplier list and certificate check for spices and ingredients,"FR-11, FR-22"
+metals,"Supplier certificates at goods-in, lot captured for trace",FR-11
+non-pathogenic micro-organisms,"Hygiene and chill-chain records, shelf-life verification",FR-06
+allergens,"Recipe allergen profile, changeover sign-off, label verification at pack","FR-07, FR-08, FR-09"
+environmental pollutants,Supplier approval and certificates,FR-22
+organoleptic aspects,Goods-in and pre-dispatch quality checks with hold / release,FR-10
+microbial contaminants (other),"Hygiene, chill-chain and shelf-life records; positive release","FR-06, FR-10"
+food additives and flavourings,"Recipe master data (nitrite and other additive limits), weigh-up records","FR-02, FR-22"
+feed additives,Approved-supplier list and certificate check at goods-in,"FR-11, FR-22"
+composition,Recipe master data and label verification,"FR-09, FR-22"
+foreign bodies / physical danger,"Metal detection checks recorded per batch, hold on failure","FR-06, FR-10"
+adulteration / fraud,"Supplier approval, lot genealogy, mass balance","FR-11, FR-12"
+foreign bodies,"Metal detection checks recorded per batch, hold on failure","FR-06, FR-10"
+chemical contamination (other),Supplier certificates; chemical storage and cleaning records,"FR-11, FR-22"
+parasitic infestation,Goods-in inspection with hold / release,FR-10
+faulty labelling or claims,Label verification at pack against recipe master data,"FR-09, FR-22"
+organoleptic non-compliance,Goods-in and pre-dispatch quality checks with hold / release,FR-10
+radiation,Supplier certificates at goods-in,FR-22
+mycotoxins,Supplier certificates for spices and ingredients,FR-22
+outbreak/poisoning investigation,Lot genealogy and rapid trace back / forward,"FR-11, FR-12"
+not determined (other),"Hold pending investigation by Quality, with release record",FR-10
+packaging defective / incorrect,Pack and label checks with hold / release,"FR-09, FR-10"
+fraud investigation,"Supplier approval, lot genealogy, mass balance","FR-11, FR-12"
+natural toxins (other),Supplier certificates for ingredients,FR-22

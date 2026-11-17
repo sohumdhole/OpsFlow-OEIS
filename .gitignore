@@ -1,0 +1,12 @@
+# 4TU production log: download it yourself (see data/README.md); not redistributed
+data/raw/4tu_production_data.zip
+data/raw/*.zip
+# built locally by run_pipeline.py; contains event-level production data
+outputs/opsflow.duckdb
+outputs/opsflow.duckdb.wal
+powerbi/data/fact_task.csv
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.streamlit/secrets.toml

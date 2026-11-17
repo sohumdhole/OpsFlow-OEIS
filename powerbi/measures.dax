@@ -1,0 +1,28 @@
+// OpsFlow-OEIS DAX measures. Table names match the CSVs in powerbi/data.
+// Production (fact_task = one row per production report; fact_case = one row per work order)
+Work Orders = DISTINCTCOUNT ( fact_task[case_id] )
+Completed Work Orders = CALCULATE ( COUNTROWS ( fact_case ), fact_case[reached_packing] = TRUE () )
+Mean Lead Time (days) = CALCULATE ( AVERAGE ( fact_case[lead_time_h] ), fact_case[reached_packing] = TRUE () ) / 24
+Median Lead Time (days) = CALCULATE ( MEDIAN ( fact_case[lead_time_h] ), fact_case[reached_packing] = TRUE () ) / 24
+Flow Efficiency = DIVIDE ( SUM ( fact_case[processing_h] ), SUM ( fact_case[lead_time_h] ) )
+Run Hours = SUMX ( FILTER ( fact_task, fact_task[report_type] = "D" ), fact_task[duration_min] ) / 60
+Setup Hours = SUMX ( FILTER ( fact_task, fact_task[report_type] = "S" ), fact_task[duration_min] ) / 60
+Breakdown Hours = SUMX ( FILTER ( fact_task, fact_task[report_type] = "B" ), fact_task[duration_min] ) / 60
+Setup Share = DIVIDE ( [Setup Hours], [Run Hours] + [Setup Hours] )
+Queue Hours = SUM ( fact_task[wait_before_min] ) / 60
+Queue Share = DIVIDE ( [Queue Hours], CALCULATE ( [Queue Hours], ALL ( dim_stage ) ) )
+Units Completed = SUM ( fact_task[qty_completed] )
+Units Rejected = SUM ( fact_task[qty_rejected] )
+Rejection Rate (inspection) =
+    VAR insp = FILTER ( fact_task, fact_task[stage] IN { "In-process QC", "Final inspection" } )
+    RETURN DIVIDE ( SUMX ( insp, fact_task[qty_rejected] ), SUMX ( insp, fact_task[qty_completed] + fact_task[qty_rejected] ) )
+Orders With Rework = CALCULATE ( COUNTROWS ( fact_case ), fact_case[has_rework] = TRUE () )
+Rework Rate = DIVIDE ( [Orders With Rework], COUNTROWS ( fact_case ) )
+Breakdown Events = CALCULATE ( COUNTROWS ( fact_task ), fact_task[report_type] = "B" )
+
+// Food safety (fact_rasff, fact_fsai)
+RASFF Notifications = COUNTROWS ( fact_rasff )
+RASFF Serious Share = DIVIDE ( CALCULATE ( COUNTROWS ( fact_rasff ), fact_rasff[risk_decision] = "serious" ), [RASFF Notifications] )
+RASFF Ireland Involved = CALCULATE ( COUNTROWS ( fact_rasff ), fact_rasff[ireland_involved] = TRUE () )
+FSAI Allergen Alerts = COUNTROWS ( fact_fsai )
+FSAI Label or Pack Errors = CALCULATE ( COUNTROWS ( fact_fsai ), fact_fsai[failure_mode] IN { "Mispacked product", "Incorrectly declared", "Not labelled in English" } )
